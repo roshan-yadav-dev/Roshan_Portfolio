@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 bg-[#f6f8fd] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-start mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-semibold text-indigo-600 mb-3">
@@ -41,7 +41,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Left Column: Direct Links & Info */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-8 rounded-3xl bg-white border border-indigo-100/80 space-y-6 shadow-xl shadow-indigo-100/40">
@@ -90,7 +90,7 @@ export default function Contact() {
                   <div>
                     <div className="font-bold text-sm text-slate-900">Email</div>
                     <div className="text-xs text-indigo-600 font-semibold">
-                      roshan.yadav.dev@gmail.com <span className="text-slate-400 font-normal text-[11px]">(Replace with your email)</span>
+                      roshanarvind1@gmail.com
                     </div>
                   </div>
                 </div>
