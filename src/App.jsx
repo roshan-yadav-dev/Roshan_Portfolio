@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import EngineeringApproach from './components/EngineeringApproach';
-import GithubSection from './components/GithubSection';
-import Certifications from './components/Certifications';
+import CaseStudies from './components/CaseStudies';
+import DesignSystemSection from './components/DesignSystemSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -15,8 +14,8 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'certifications', 'contact'];
-      const scrollPosition = window.scrollY + 200;
+      const sections = ['home', 'about', 'skills', 'projects', 'case-studies', 'design-system', 'contact'];
+      const scrollPosition = window.scrollY + 220;
 
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
@@ -36,16 +35,15 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-bgDark text-slate-100 font-sans selection:bg-accentCyan/30 selection:text-accentCyan">
+    <div className="min-h-screen bg-[#f6f8fd] text-slate-900 font-sans antialiased selection:bg-indigo-500/20 selection:text-indigo-600">
       <Navbar activeSection={activeSection} />
       <main>
         <Hero />
         <About />
         <Skills />
         <Projects />
-        <EngineeringApproach />
-        <GithubSection />
-        <Certifications />
+        <CaseStudies />
+        <DesignSystemSection />
         <Contact />
       </main>
       <Footer />

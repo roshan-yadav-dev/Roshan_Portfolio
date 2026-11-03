@@ -1,149 +1,129 @@
 export const projectsData = [
   {
-    id: "cloudvpn",
-    title: "CloudVPN+",
-    repoName: "CloudVPN-WorkSpace",
-    tagline: "Privacy-first, zero-trust cross-platform VPN client controller & server system.",
-    category: "Systems & Networking",
-    priority: 1,
-    featured: true,
-    githubUrl: "https://github.com/roshan-yadav-dev/CloudVPN-WorkSpace",
+    id: 'offerjob',
+    title: 'OfferJob',
+    repoName: 'OfferJob',
+    category: 'AI / Product',
+    summary: 'AI-powered recruitment marketplace designed to improve hiring quality and reduce manual screening overhead.',
+    problem: 'Recruiters and job seekers were struggling with inefficient matching, incomplete role visibility, and low-quality candidate filtering.',
+    solution: 'I designed and built a product experience that combines job discovery, applicant workflows, and AI-assisted resume-to-role matching in a single flow.',
+    features: [
+      'AI-assisted candidate-to-job matching',
+      'Recruiter and candidate role-based views',
+      'Job application workflow and tracking',
+      'Modern responsive dashboard UI',
+      'REST API integration for recruitment actions'
+    ],
+    techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'FastAPI', 'MongoDB', 'Tailwind CSS', 'JWT'],
+    githubUrl: 'https://github.com/roshan-yadav-dev/OfferJob',
     liveUrl: null,
-    techStack: [
-      "Python", "FastAPI", "WireGuard", "Tor Architecture", "Traffic Routing", 
-      "Linux Systems", "Flutter", "Docker", "MongoDB"
-    ],
-    problem: "Traditional VPN solutions often rely on monolithic client architectures that expose low-level security tokens, leak DNS metadata, and lack multi-hop relay fallback.",
-    solution: "Built a zero-trust decoupled architecture where a Flutter client controller interfaces strictly via authenticated FastAPI microservices to handle WireGuard state management and Tor circuit routing without direct database or daemon exposure.",
-    highlights: [
-      "Designed zero-trust client controller layer running on Android and Linux Fedora environments.",
-      "Engineered automated WireGuard peer provisioning with key exchange and connection state polling.",
-      "Integrated Tor routing circuit orchestration for multi-hop anonymity and secure network isolation.",
-      "Containerized microservices using Docker Compose with automated health probes and fallback routing."
-    ],
-    architecture: [
-      { step: "01", name: "Client Layer", desc: "Flutter UI / Controller (Android & Fedora Linux)" },
-      { step: "02", name: "API Gateway", desc: "FastAPI REST Server (JWT Auth & Session Validation)" },
-      { step: "03", name: "Tunnel Engine", desc: "WireGuard Kernel Interface & UAPI Controller" },
-      { step: "04", name: "Tor Relay", desc: "Anonymized Circuit Routing & DNS Leak Prevention" },
-      { step: "05", name: "State Storage", desc: "MongoDB Atlas for Encrypted Peer Metadata" }
-    ]
+    caseStudyUrl: '#offerjob-case-study',
+    githubLabel: 'View Source'
   },
   {
-    id: "offerjob",
-    title: "OfferJob",
-    repoName: "OfferJob",
-    tagline: "AI-powered recruitment platform featuring NLP semantic job matching and RAG pipelines.",
-    category: "AI & Full-Stack",
-    priority: 2,
-    featured: true,
-    githubUrl: "https://github.com/roshan-yadav-dev/OfferJob",
+    id: 'codequest',
+    title: 'Code Quest',
+    repoName: 'Code_Quest',
+    category: 'Full-Stack',
+    summary: 'Gamified learning platform that blends quests, progress feedback, and skill-based challenges to make coding practice more motivating.',
+    problem: 'Self-paced coding education often lacks clear progression, engagement, and motivating feedback loops for learners.',
+    solution: 'I translated a learning product concept into a user-friendly experience with challenge flows, dashboards, and a structured progression model.',
+    features: [
+      'Quest-based learning experience',
+      'Progress tracking and achievement flow',
+      'Responsive education dashboard',
+      'User progression and course organization',
+      'Interactive learning-focused UI design'
+    ],
+    techStack: ['React', 'JavaScript', 'Python', 'FastAPI', 'Tailwind CSS', 'REST APIs', 'PostgreSQL'],
+    githubUrl: 'https://github.com/roshan-yadav-dev/Code_Quest',
     liveUrl: null,
-    techStack: [
-      "Node.js", "Express", "Python", "FastAPI", "React", "NLP", 
-      "RAG Pipeline", "MongoDB", "Microservices", "JWT Auth"
-    ],
-    problem: "Legacy applicant tracking systems rely on simple keyword filtering, missing qualified candidates with different phrasing or contextually relevant experience.",
-    solution: "Developed a microservices-based recruitment system pairing a Node.js orchestration backend with a stateless Python FastAPI AI service executing RAG and semantic vector similarity scoring.",
-    highlights: [
-      "Architected dual-service backend: Express.js for business logic/data persistence and FastAPI for AI inference.",
-      "Built Retrieval-Augmented Generation (RAG) pipeline to parse resumes and compute context-aware match scores.",
-      "Implemented Role-Based Access Control (RBAC) separating Candidate and Recruiter workflow portals.",
-      "Designed clean RESTful APIs with resilient cross-service retries and fallback error handling."
-    ],
-    architecture: [
-      { step: "01", name: "Frontend", desc: "React Single-Page Application (Candidate & Recruiter Portals)" },
-      { step: "02", name: "Node.js Core", desc: "Express Orchestrator Backend & RBAC Middleware" },
-      { step: "03", name: "Database", desc: "MongoDB for Users, Jobs, and Application States" },
-      { step: "04", name: "AI Service", desc: "Stateless FastAPI Engine (NLP Embeddings & RAG)" },
-      { step: "05", name: "Matching Engine", desc: "Contextual Candidate-to-Job Similarity Scoring" }
-    ]
+    caseStudyUrl: '#codequest-case-study',
+    githubLabel: 'View Source'
   },
   {
-    id: "galleryapp",
-    title: "GalleryApp",
-    repoName: "GalleryApp",
-    tagline: "Production-grade Android media application built with Kotlin, Jetpack Compose, and Clean Architecture.",
-    category: "Android Architecture",
-    priority: 3,
-    featured: true,
-    githubUrl: "https://github.com/roshan-yadav-dev/GalleryApp",
+    id: 'nexvia',
+    title: 'Nexvia',
+    repoName: 'Nexvia',
+    category: 'Full-Stack',
+    summary: 'Full-stack web application focused on intuitive product experiences, clean data flows, and polished user interfaces.',
+    problem: 'Modern web apps require better product polish and clear information architecture so users can complete tasks without friction.',
+    solution: 'I built a product-style frontend with structured layouts, reusable UI patterns, and clean data handling to support the core experience.',
+    features: [
+      'Responsive product interface',
+      'Structured information architecture',
+      'Reusable UI building blocks',
+      'Full-stack application flow',
+      'Component-driven frontend implementation'
+    ],
+    techStack: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/roshan-yadav-dev/Nexvia',
     liveUrl: null,
-    techStack: [
-      "Kotlin", "Jetpack Compose", "Material 3", "Clean Architecture", 
-      "MVVM Pattern", "Scoped Storage", "Coroutines", "StateFlow"
-    ],
-    problem: "Managing high-resolution media grids on Android often leads to UI thread stutter, high memory footprint, and storage permission compliance failures.",
-    solution: "Engineered a high-performance gallery app enforcing Clean Architecture (Data, Domain, Presentation) with Kotlin Coroutines and full Android Scoped Storage compliance.",
-    highlights: [
-      "Built modular architecture isolating business logic in Domain Use Cases from UI Presentation.",
-      "Full compliance with Android Scoped Storage standards (MinSDK 26, TargetSDK 35).",
-      "Asynchronous image and GIF thumbnail rendering using Jetpack Compose and stateful flows.",
-      "Automated CI/CD workflow configured with GitHub Actions for Android builds and linting."
-    ],
-    architecture: [
-      { step: "01", name: "UI Layer", desc: "Jetpack Compose Screens & Material 3 Visual Components" },
-      { step: "02", name: "State Layer", desc: "MVVM ViewModel with Kotlin StateFlow & SharedFlow" },
-      { step: "03", name: "Domain Layer", desc: "Business Use Cases (Media Operations & Query Filters)" },
-      { step: "04", name: "Data Repository", desc: "ContentResolver Adapter with Android Scoped Storage" }
-    ]
+    caseStudyUrl: '#nexvia-case-study',
+    githubLabel: 'View Source'
   },
   {
-    id: "api-workspace",
-    title: "API Workspace",
-    repoName: "API-Workspace",
-    tagline: "Full-stack API testing platform with request history, custom headers, and JWT security.",
-    category: "API & Backend",
-    priority: 4,
-    featured: true,
-    githubUrl: "https://github.com/roshan-yadav-dev/API-Workspace",
+    id: 'mini-erp-crm',
+    title: 'Mini ERP/CRM',
+    repoName: 'Mini ERP/CRM',
+    category: 'UX / System Design',
+    summary: 'Operational workflow dashboard for teams managing leads, records, tasks, and core business processes within one workspace.',
+    problem: 'Small teams often need a unified dashboard without complexity, especially for operations, CRM records, and work coordination.',
+    solution: 'I designed a structured interface focused on clarity, actionability, and product workflows that can scale into modular business tools.',
+    features: [
+      'Lead and customer management views',
+      'Task and workflow organization',
+      'Operational dashboard layout',
+      'Entity-centric product design',
+      'Modular UI patterns and enterprise-friendly structure'
+    ],
+    techStack: ['React', 'TypeScript', 'FastAPI', 'Python', 'Tailwind CSS', 'REST APIs'],
+    githubUrl: '#mini-erp-crm-placeholder',
     liveUrl: null,
-    techStack: [
-      "React", "FastAPI", "Python", "JWT Auth", "REST APIs", 
-      "Uvicorn", "JSON Persistence", "CSS Modules"
-    ],
-    problem: "Developers frequently require a lightweight, zero-bloat platform for executing multi-method API tests with token authentication and history logging.",
-    solution: "Created an end-to-end API workspace with React UI and FastAPI backend, allowing developers to execute GET/POST/PUT/PATCH/DELETE requests, inspect responses, and manage auth collections.",
-    highlights: [
-      "Full HTTP method support with live response code, execution time, and payload size tracking.",
-      "Secure JWT user registration, login, and bearer token protection on workspace routes.",
-      "Local JSON persistence module for user accounts, collections, and execution history.",
-      "Clean modular code structure separating backend routes, models, and service controllers."
-    ],
-    architecture: [
-      { step: "01", name: "Client UI", desc: "React Workspace Dashboard & Request Builder" },
-      { step: "02", name: "Auth Layer", desc: "FastAPI JWT Bearer Token Security Middleware" },
-      { step: "03", name: "Dispatcher", desc: "Python HTTP Client Proxy & Response Analytics" },
-      { step: "04", name: "Storage", desc: "JSON Data Store for Workspaces & History" }
-    ]
+    caseStudyUrl: '#mini-erp-crm-case-study',
+    githubLabel: 'GitHub Repository',
+    placeholder: true
   },
   {
-    id: "smart-expense-tracker",
-    title: "Smart Expense Tracker",
-    repoName: "Smart-Expense-Tracker",
-    tagline: "Flask backend application for daily expense management, category analytics, and CSV exports.",
-    category: "Full-Stack & APIs",
-    priority: 5,
-    featured: true,
-    githubUrl: "https://github.com/roshan-yadav-dev/Smart-Expense-Tracker",
+    id: 'api-workspace',
+    title: 'API Workspace',
+    repoName: 'API-Workspace',
+    category: 'Developer Tools',
+    summary: 'API testing and development workspace for exploring endpoints, validating payloads, and managing request history.',
+    problem: 'Developers needed a lightweight environment to test multiple endpoint types without overwhelming setup or lack of visibility.',
+    solution: 'I built an efficient workspace with clear request configuration, response inspection, and workflow-focused UI patterns.',
+    features: [
+      'Multi-method API request builder',
+      'Auth header and JWT handling',
+      'Response validation and metadata display',
+      'Request history and saved workspace context',
+      'Developer-focused interface design'
+    ],
+    techStack: ['React', 'FastAPI', 'Python', 'JWT', 'REST APIs', 'JavaScript', 'CSS3'],
+    githubUrl: 'https://github.com/roshan-yadav-dev/API-Workspace',
     liveUrl: null,
-    techStack: [
-      "Python", "Flask", "HTML5", "CSS3", "REST APIs", 
-      "Data Visualization", "CSV Export"
+    caseStudyUrl: '#api-workspace-case-study',
+    githubLabel: 'View Source'
+  },
+  {
+    id: 'galleryapp',
+    title: 'Gallery App',
+    repoName: 'GalleryApp',
+    category: 'Mobile',
+    summary: 'Android media app built around visual browsing, media organization, and a high-quality mobile experience.',
+    problem: 'Users needed a cleaner media management experience with better organization and smooth content browsing across albums and media.',
+    solution: 'I created a mobile-first application with strong information hierarchy, modern composable UI, and structured media handling patterns.',
+    features: [
+      'Modern Android media browsing',
+      'Album and content organization',
+      'Responsive mobile layout',
+      'Optimized media list performance',
+      'Composable mobile UI patterns'
     ],
-    problem: "Manual financial tracking lacks instant category breakdowns and simple data export capabilities for personal budgeting.",
-    solution: "Designed a responsive Flask web application that categorizes spending, computes real-time summary statistics via REST endpoints, and exports CSV reports.",
-    highlights: [
-      "Built Flask API endpoint (/api/category_summary) delivering dynamic JSON analytics.",
-      "Implemented automated CSV report generation for instant data downloads.",
-      "Created sortable transaction ledger with category filter capabilities.",
-      "Responsive lightweight layout optimized for quick mobile and desktop logging."
-    ],
-    architecture: [
-      { step: "01", name: "Web Interface", desc: "HTML5 / CSS3 Dashboard for Data Entry & Viewing" },
-      { step: "02", name: "Flask Routes", desc: "App Routing Engine & Request Handlers" },
-      { step: "03", name: "Analytics Engine", desc: "Category Aggregations & Summary Calculations" },
-      { step: "04", name: "Export Engine", desc: "CSV Generation & Download Handler" }
-    ]
+    techStack: ['Kotlin', 'Jetpack Compose', 'Android', 'Material 3', 'MVVM', 'Coroutines'],
+    githubUrl: 'https://github.com/roshan-yadav-dev/GalleryApp',
+    liveUrl: null,
+    caseStudyUrl: '#gallery-app-case-study',
+    githubLabel: 'View Source'
   }
 ];
