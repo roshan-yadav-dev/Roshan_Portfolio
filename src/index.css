@@ -4,60 +4,55 @@
 
 @layer base {
   html {
+    scroll-behavior: smooth;
     color-scheme: light;
   }
-  
+
   body {
-    background-color: #f6f8fd;
-    color: #0f172a;
+    @apply bg-[#f6f8fd] text-slate-900 antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  a {
+    @apply transition-colors;
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+@layer utilities {
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }
 
-/* Reduced Motion support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.7) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.7);
+  border-radius: 9999px;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
-}
-
-/* Dynamic Grid Background with ambient purple glow */
-.bg-grid-pattern {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
-}
-
-.bg-purple-ambient {
-  background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-              radial-gradient(circle at 90% 40%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 50% 80%, rgba(79, 70, 229, 0.05) 0%, transparent 40%);
-}
-
-.hover-border-glow {
-  transition: all 0.25s ease-in-out;
-}
-.hover-border-glow:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.12);
 }

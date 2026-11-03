@@ -1,144 +1,126 @@
 import React from 'react';
-import { ArrowRight, Mail, Code2, Layers, ShieldCheck, Coffee } from 'lucide-react';
-import { FaGithub, FaPython, FaReact, FaNodeJs, FaDocker, FaLinux, FaDatabase } from 'react-icons/fa';
-import { SiFastapi } from 'react-icons/si';
-import HeroVisual from './HeroVisual';
+import { ArrowRight, Download, Sparkles, Code2, Briefcase } from 'lucide-react';
+import { FaGithub, FaReact, FaFigma, FaHtml5, FaCss3Alt, FaNodeJs } from 'react-icons/fa';
+import { SiTypescript, SiFastapi, SiTailwindcss, SiFigma } from 'react-icons/si';
 
 export default function Hero() {
-  const techStackPills = [
-    { name: 'Python', icon: FaPython, color: 'text-amber-500' },
-    { name: 'FastAPI', icon: SiFastapi, color: 'text-emerald-500' },
+  const techStack = [
     { name: 'React', icon: FaReact, color: 'text-sky-500' },
-    { name: 'Node.js', icon: FaNodeJs, color: 'text-emerald-600' },
-    { name: 'PostgreSQL', icon: FaDatabase, color: 'text-indigo-600' },
-    { name: 'Docker', icon: FaDocker, color: 'text-sky-600' },
-    { name: 'Linux', icon: FaLinux, color: 'text-slate-700' },
+    { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
+    { name: 'Tailwind', icon: SiTailwindcss, color: 'text-cyan-500' },
+    { name: 'Figma', icon: SiFigma, color: 'text-pink-500' },
+    { name: 'FastAPI', icon: SiFastapi, color: 'text-emerald-500' },
+    { name: 'HTML5', icon: FaHtml5, color: 'text-orange-500' },
+    { name: 'CSS3', icon: FaCss3Alt, color: 'text-blue-500' }
   ];
 
-  const stats = [
-    { icon: Code2, value: '12+', label: 'Public Repositories', color: 'text-indigo-600 bg-indigo-50 border-indigo-100' },
-    { icon: Layers, value: '5+', label: 'Major Projects', color: 'text-indigo-600 bg-indigo-50 border-indigo-100' },
-    { icon: ShieldCheck, value: '3', label: 'Industry Certifications', color: 'text-indigo-600 bg-indigo-50 border-indigo-100' },
-    { icon: Coffee, value: 'Always', label: 'Learning & Building', color: 'text-indigo-600 bg-indigo-50 border-indigo-100' },
-  ];
+  const resumeText = [
+    'Roshan Yadav',
+    'Frontend Engineer | Product-minded Developer | UI/UX Designer',
+    'Email: roshanarvind1@gmail.com',
+    'GitHub: https://github.com/roshan-yadav-dev',
+    'LinkedIn: https://www.linkedin.com/in/roshan-yadav-dev',
+    'Skills: React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Figma, UI/UX Design, FastAPI, Python, REST APIs.',
+    'Resume placeholder generated for portfolio review. Replace with the full PDF or final resume before submitting applications.'
+  ].join('\n');
+
+  const resumeDataUrl = `data:text/plain;charset=utf-8,${encodeURIComponent(resumeText)}`;
 
   return (
-    <section id="home" className="relative pt-32 pb-16 sm:pt-40 sm:pb-24 bg-grid-pattern bg-purple-ambient overflow-hidden">
-      
-      {/* Background Soft Glow Orbs */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-indigo-200/40 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute top-1/3 right-10 w-96 h-96 bg-purple-200/40 rounded-full blur-3xl pointer-events-none"></div>
+    <section id="home" className="relative overflow-hidden bg-[#f6f8fd] pt-28 pb-16 sm:pt-32 sm:pb-24">
+      <div className="absolute inset-0 bg-grid-pattern opacity-70" aria-hidden="true" />
+      <div className="absolute -left-16 top-16 h-64 w-64 rounded-full bg-indigo-200/30 blur-3xl" aria-hidden="true" />
+      <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-violet-200/30 blur-3xl" aria-hidden="true" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
-        
-        {/* Main Grid: Hero Content & IDE Visual */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Hero Text */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
-            {/* Top Student Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-semibold text-indigo-700 shadow-sm">
-              <span>CS Engineering Student</span>
-              <span className="text-indigo-300">•</span>
-              <span>Builder</span>
-              <span className="text-indigo-300">•</span>
-              <span>Problem Solver</span>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-700 shadow-sm">
+              <Sparkles className="h-3.5 w-3.5" />
+              Frontend Engineer • Product-minded Developer • UI/UX Designer
             </div>
 
-            {/* Main Heading */}
-            <div className="space-y-2">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-700">Roshan Yadav</span>
+            <div className="space-y-4">
+              <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+                Building polished digital products with a strong product and design lens.
               </h1>
-              <p className="text-xl sm:text-2xl font-bold text-indigo-600 tracking-tight">
-                Backend &amp; Full-Stack Developer <span className="text-indigo-300">|</span> AI/ML Enthusiast
+              <p className="text-lg font-medium text-slate-600 sm:text-xl">
+                Hi, I&apos;m <span className="font-bold text-indigo-600">Roshan Yadav</span> — I design and build frontend experiences that connect clear product thinking, strong UX, and high-quality engineering.
               </p>
             </div>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-medium">
-              I build practical software systems, APIs, and AI-powered applications with a focus on performance, secure architecture, and clean code.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
-              <a
-                href="#projects"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm transition-all shadow-lg shadow-indigo-200 hover:scale-[1.02]"
-              >
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              <a href="#projects" className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 View Projects
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="h-4 w-4" />
               </a>
-
-              <a
-                href="https://github.com/roshan-yadav-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/80 font-semibold text-sm transition-all shadow-sm hover:border-indigo-300 hover:scale-[1.02]"
-              >
-                <FaGithub className="w-4 h-4 text-slate-700" />
-                View GitHub
+              <a href={resumeDataUrl} download="Roshan_Yadav_Resume.txt" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-indigo-200 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                <Download className="h-4 w-4" />
+                Download Resume
               </a>
-
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-200/80 font-semibold text-sm transition-all shadow-sm hover:border-indigo-300 hover:scale-[1.02]"
-              >
-                <Mail className="w-4 h-4 text-slate-700" />
-                Contact Me
+              <a href="https://github.com/roshan-yadav-dev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-indigo-200 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                <FaGithub className="h-4 w-4" />
+                GitHub
               </a>
             </div>
 
-            {/* Tech Stack Pills Row */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-4">
-              {techStackPills.map((tech, idx) => {
-                const Icon = tech.icon;
-                return (
-                  <div
-                    key={idx}
-                    className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/80 text-xs font-semibold text-slate-700 shadow-sm hover:border-indigo-200 transition-colors"
-                  >
-                    <Icon className={`w-3.5 h-3.5 ${tech.color}`} />
-                    <span>{tech.name}</span>
-                  </div>
-                );
-              })}
+            <div className="flex flex-wrap justify-center gap-2 pt-2 lg:justify-start">
+              {techStack.map(({ name, icon: Icon, color }) => (
+                <span key={name} className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm">
+                  <Icon className={`h-3.5 w-3.5 ${color}`} />
+                  {name}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-indigo-100 bg-white/90 p-6 shadow-[0_20px_45px_-20px_rgba(79,70,229,0.25)] backdrop-blur-sm">
+            <div className="mb-6 flex items-center justify-between">
+              <div>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-indigo-600">Current focus</p>
+                <h2 className="mt-2 text-2xl font-bold text-slate-900">Product + Frontend</h2>
+              </div>
+              <div className="rounded-2xl bg-indigo-50 p-3 text-indigo-600">
+                <Code2 className="h-6 w-6" />
+              </div>
             </div>
 
-          </div>
-
-          {/* Right Column: Hero Visual IDE */}
-          <div className="lg:col-span-5 flex justify-center">
-            <HeroVisual />
-          </div>
-
-        </div>
-
-        {/* Middle Stats Banner */}
-        <div className="rounded-2xl bg-white/90 backdrop-blur-md border border-indigo-100/80 p-6 sm:p-8 shadow-xl shadow-indigo-100/40">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, idx) => {
-              const Icon = stat.icon;
-              return (
-                <div key={idx} className="flex items-center gap-4">
-                  <div className={`p-3 rounded-xl border ${stat.color} flex items-center justify-center`}>
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-2xl font-extrabold text-slate-900 font-sans tracking-tight">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs font-semibold text-slate-500 font-sans">
-                      {stat.label}
-                    </div>
-                  </div>
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+                  <Briefcase className="h-3.5 w-3.5" />
+                  Role alignment
                 </div>
-              );
-            })}
+                <p className="text-sm leading-6 text-slate-700">
+                  UI/Frontend Engineer with strong frontend implementation, product thinking, responsive design, and design-to-code execution.
+                </p>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl border border-slate-200 bg-white p-4">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500">Design</p>
+                  <p className="mt-2 text-sm font-semibold text-slate-800">Figma, Auto Layout, component systems</p>
+                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white p-4">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500">Frontend</p>
+                  <p className="mt-2 text-sm font-semibold text-slate-800">React, TypeScript, accessible interfaces</p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-indigo-700">
+                  <FaNodeJs className="h-3.5 w-3.5" />
+                  Stack strength
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+                  {['React', 'TypeScript', 'Tailwind', 'FastAPI', 'Python', 'REST APIs'].map((item) => (
+                    <span key={item} className="rounded-full bg-white px-2.5 py-1 border border-indigo-100">{item}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );
