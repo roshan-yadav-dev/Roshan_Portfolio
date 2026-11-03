@@ -36,10 +36,10 @@ export const projectsData = [
       'Interactive learning-focused UI design'
     ],
     techStack: ['React', 'JavaScript', 'Python', 'FastAPI', 'Tailwind CSS', 'REST APIs', 'PostgreSQL'],
-    githubUrl: 'https://github.com/roshan-yadav-dev/Code_Quest',
+    githubUrl: null,
     liveUrl: null,
     caseStudyUrl: '#codequest-case-study',
-    githubLabel: 'View Source'
+    githubLabel: 'Repository link coming soon'
   },
   {
     id: 'nexvia',
@@ -59,7 +59,7 @@ export const projectsData = [
     techStack: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
     githubUrl: 'https://github.com/roshan-yadav-dev/Nexvia',
     liveUrl: null,
-    caseStudyUrl: '#nexvia-case-study',
+    caseStudyUrl: null,
     githubLabel: 'View Source'
   },
   {
@@ -78,10 +78,10 @@ export const projectsData = [
       'Modular UI patterns and enterprise-friendly structure'
     ],
     techStack: ['React', 'TypeScript', 'FastAPI', 'Python', 'Tailwind CSS', 'REST APIs'],
-    githubUrl: '#mini-erp-crm-placeholder',
+    githubUrl: null,
     liveUrl: null,
     caseStudyUrl: '#mini-erp-crm-case-study',
-    githubLabel: 'GitHub Repository',
+    githubLabel: 'Repository link coming soon',
     placeholder: true
   },
   {
@@ -102,7 +102,7 @@ export const projectsData = [
     techStack: ['React', 'FastAPI', 'Python', 'JWT', 'REST APIs', 'JavaScript', 'CSS3'],
     githubUrl: 'https://github.com/roshan-yadav-dev/API-Workspace',
     liveUrl: null,
-    caseStudyUrl: '#api-workspace-case-study',
+    caseStudyUrl: null,
     githubLabel: 'View Source'
   },
   {
@@ -123,7 +123,7 @@ export const projectsData = [
     techStack: ['Kotlin', 'Jetpack Compose', 'Android', 'Material 3', 'MVVM', 'Coroutines'],
     githubUrl: 'https://github.com/roshan-yadav-dev/GalleryApp',
     liveUrl: null,
-    caseStudyUrl: '#gallery-app-case-study',
+    caseStudyUrl: null,
     githubLabel: 'View Source'
   }
 ];

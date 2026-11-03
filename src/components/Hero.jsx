@@ -14,17 +14,8 @@ export default function Hero() {
     { name: 'CSS3', icon: FaCss3Alt, color: 'text-blue-500' }
   ];
 
-  const resumeText = [
-    'Roshan Yadav',
-    'Frontend Engineer | Product-minded Developer | UI/UX Designer',
-    'Email: roshanarvind1@gmail.com',
-    'GitHub: https://github.com/roshan-yadav-dev',
-    'LinkedIn: https://www.linkedin.com/in/roshan-yadav-dev',
-    'Skills: React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Figma, UI/UX Design, FastAPI, Python, REST APIs.',
-    'Resume placeholder generated for portfolio review. Replace with the full PDF or final resume before submitting applications.'
-  ].join('\n');
-
-  const resumeDataUrl = `data:text/plain;charset=utf-8,${encodeURIComponent(resumeText)}`;
+  const resumeHref = '/Roshan_Portfolio/Roshan_YadavResume.pdf';
+  const resumeDownloadName = 'Roshan_Yadav_Resume.pdf';
 
   return (
     <section id="home" className="relative overflow-hidden bg-[#f6f8fd] pt-28 pb-16 sm:pt-32 sm:pb-24">
@@ -54,7 +45,7 @@ export default function Hero() {
                 View Projects
                 <ArrowRight className="h-4 w-4" />
               </a>
-              <a href={resumeDataUrl} download="Roshan_Yadav_Resume.txt" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-indigo-200 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+              <a href={resumeHref} download={resumeDownloadName} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-indigo-200 hover:text-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                 <Download className="h-4 w-4" />
                 Download Resume
               </a>

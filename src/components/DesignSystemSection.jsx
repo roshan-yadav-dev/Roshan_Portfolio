@@ -38,8 +38,8 @@ export default function DesignSystemSection() {
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-indigo-600">Design approach</p>
               <h3 className="mt-2 text-2xl font-bold text-slate-900">From Figma concepts to reusable frontend systems</h3>
             </div>
-            <a href="#" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-indigo-200 hover:text-indigo-700">
-              Figma prototype placeholder
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-indigo-200 hover:text-indigo-700">
+              Let&apos;s build with design systems
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>

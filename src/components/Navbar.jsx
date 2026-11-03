@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Github, Linkedin, Mail, Menu, X, ExternalLink } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
 export default function Navbar({ activeSection }) {
@@ -58,7 +58,9 @@ export default function Navbar({ activeSection }) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              aria-label="Toggle menu"
+              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 md:hidden"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -68,7 +70,7 @@ export default function Navbar({ activeSection }) {
       </div>
 
       {mobileMenuOpen && (
-        <div className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8 md:hidden">
+        <div id="mobile-navigation" className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8 md:hidden">
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-lg">
             <div className="space-y-2">
               {navLinks.map((link) => (

@@ -3,7 +3,10 @@ import { ArrowUpRight, Github, MonitorPlay, Sparkles } from 'lucide-react';
 
 export default function ProjectCard({ project }) {
   const isPlaceholder = Boolean(project.placeholder);
+  const hasSourceLink = Boolean(project.githubUrl && !project.githubUrl.startsWith('#'));
+  const hasCaseStudyLink = Boolean(project.caseStudyUrl);
   const sourceLabel = isPlaceholder ? 'GitHub Repository' : project.githubLabel || 'View Source';
+  const showSourceStatus = !hasSourceLink && Boolean(project.githubLabel);
 
   return (
     <article className="group flex h-full flex-col rounded-3xl border border-indigo-100 bg-white p-5 shadow-[0_18px_35px_-22px_rgba(79,70,229,0.2)] transition duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-[0_20px_40px_-20px_rgba(79,70,229,0.35)]">
@@ -49,15 +52,24 @@ export default function ProjectCard({ project }) {
       </div>
 
       <div className="mt-6 flex flex-wrap items-center gap-3 pt-5">
-        <a
-          href={project.githubUrl}
-          target={project.githubUrl.startsWith('http') ? '_blank' : undefined}
-          rel={project.githubUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
-          className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2.5 text-xs font-semibold text-white transition hover:bg-slate-700"
-        >
-          <Github className="h-4 w-4" />
-          {sourceLabel}
-        </a>
+        {hasSourceLink && (
+          <a
+            href={project.githubUrl}
+            target={project.githubUrl.startsWith('http') ? '_blank' : undefined}
+            rel={project.githubUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+            className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2.5 text-xs font-semibold text-white transition hover:bg-slate-700"
+          >
+            <Github className="h-4 w-4" />
+            {sourceLabel}
+          </a>
+        )}
+
+        {showSourceStatus && (
+          <span className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-xs font-semibold text-slate-500">
+            <Github className="h-4 w-4" />
+            {project.githubLabel}
+          </span>
+        )}
 
         {project.liveUrl && (
           <a
@@ -71,7 +83,7 @@ export default function ProjectCard({ project }) {
           </a>
         )}
 
-        {project.caseStudyUrl && (
+        {hasCaseStudyLink && (
           <a href={project.caseStudyUrl} className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-xs font-semibold text-slate-700 transition hover:border-indigo-200 hover:text-indigo-700">
             Case Study
             <ArrowUpRight className="h-3.5 w-3.5" />

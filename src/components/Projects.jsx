@@ -4,7 +4,7 @@ import { projectsData } from '../data/projectsData';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
-  const categories = ['All', 'AI / Product', 'Full-Stack', 'Developer Tools', 'UX / System Design', 'Mobile'];
+  const categories = ['All', ...new Set(projectsData.map((project) => project.category))];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProjects = selectedCategory === 'All'
@@ -32,6 +32,7 @@ export default function Projects() {
                 key={category}
                 type="button"
                 onClick={() => setSelectedCategory(category)}
+                aria-pressed={selectedCategory === category}
                 className={`rounded-xl px-3 py-2 text-xs font-semibold transition ${
                   selectedCategory === category
                     ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200'
