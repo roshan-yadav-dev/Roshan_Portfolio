@@ -14,7 +14,7 @@ export default function Hero() {
     { name: 'CSS3', icon: FaCss3Alt, color: 'text-blue-500' }
   ];
 
-  const resumeHref = '/Roshan_Portfolio/Roshan_YadavResume.pdf';
+  const resumeHref = '/Roshan_Portfolio/Roshan_Yadav_Resume.pdf';
   const resumeDownloadName = 'Roshan_Yadav_Resume.pdf';
 
   return (
